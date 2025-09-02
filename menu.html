@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Niyantri Dog Care - Menu</title>
+  <meta name="description" content="Our grooming services and add-ons." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{brand:'#f59e0b'}}}}</script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <style>body{opacity:0; transition:opacity .6s ease-in} .body-loaded{opacity:1}</style>
+</head>
+<body class="antialiased" style="font-family: ui-sans-serif, system-ui, -apple-system, Inter, Arial;">
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 bg-white bg-opacity-90 backdrop-filter backdrop-blur-lg shadow-md z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center space-x-2">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" class="text-orange-600" aria-label="logo">
+            <path d="M3 12l4-2 4 2-4 2-4-2z" fill="currentColor"/>
+            <circle cx="9" cy="8" r="2" fill="#000"/>
+            <circle cx="14" cy="8" r="2" fill="#000"/>
+          </svg>
+          <span class="font-semibold text-xl text-gray-800">Niyantri Dog Care</span>
+        </a>
+        <nav class="hidden md:flex space-x-6 text-gray-700">
+          <a href="index.html" class="flex items-center hover:text-gray-900"><span class="mr-1">🏠</span>Home</a>
+          <a href="menu.html" class="flex items-center hover:text-gray-900"><span class="mr-1">🍖</span>Menu</a>
+          <a href="cart.html" class="flex items-center hover:text-gray-900"><span class="mr-1">🧺</span>Cart (<span id="cart-count">0</span>)</a>
+          <a href="about.html" class="flex items-center hover:text-gray-900"><span class="mr-1">ℹ️</span>About</a>
+          <a href="contact.html" class="flex items-center hover:text-gray-900"><span class="mr-1">✉️</span>Contact</a>
+        </nav>
+        <div class="md:hidden"><button id="mobile-menu-button" class="text-gray-700"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button></div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+      <a href="index.html" class="block py-2">Home</a>
+      <a href="menu.html" class="block py-2">Menu</a>
+      <a href="cart.html" class="block py-2">Cart</a>
+      <a href="about.html" class="block py-2">About</a>
+      <a href="contact.html" class="block py-2">Contact</a>
+    </div>
+  </header>
+
+  <main class="pt-20">
+    <section class="py-12 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <h1 class="text-3xl font-bold mb-6">Our Services</h1>
+        <p class="mb-6">Choose from a range of grooming services. Each item can be added to cart for checkout.</p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Bathing -->
+          <div class="bg-white rounded-xl shadow p-4 flex flex-col">
+            <img src="https://images.pexels.com/photos/16075192/pexels-photo-16075192.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Bathing" class="h-40 w-full object-cover rounded" />
+            <div class="mt-2 flex-1">
+              <h3 class="font-semibold">Bathing</h3>
+              <p class="text-sm text-gray-600">A gentle full wash for a fresh coat.</p>
+            </div>
+            <div class="mt-2 flex items-center justify-between">
+              <span class="font-semibold">$20</span>
+              <button class="bg-orange-600 text-white px-3 py-2 rounded" onclick="addToCart('svc-bathing','Bathing',20)">Add to Cart</button>
+            </div>
+          </div>
+          <!-- Spa -->
+          <div class="bg-white rounded-xl shadow p-4 flex flex-col">
+            <img src="https://images.pexels.com/photos/5793696/pexels-photo-5793696.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Spa" class="h-40 w-full object-cover rounded" />
+            <div class="mt-2 flex-1">
+              <h3 class="font-semibold">Spa</h3>
+              <p class="text-sm text-gray-600">Relaxing spa session for coat & skin.</p>
+            </div>
+            <div class="mt-2 flex items-center justify-between">
+              <span class="font-semibold">$35</span>
+              <button class="bg-orange-600 text-white px-3 py-2 rounded" onclick="addToCart('svc-spa','Spa',35)">Add to Cart</button>
+            </div>
+          </div>
+          <!-- Nails -->
+          <div class="bg-white rounded-xl shadow p-4 flex flex-col">
+            <img src="https://pixabay.com/get/g6d2981a256050bbe64cef94be28ab22e24ff53c0f8af047531b40d4250a4052e9c026dadb4ff5e87210bbdafa783283eea917b1e7294a24312e21c5e14e969af_640.jpg" alt="Nail trimming" class="h-40 w-full object-cover rounded" />
+            <div class="mt-2 flex-1">
+              <h3 class="font-semibold">Nail Trimming</h3>
+              <p class="text-sm text-gray-600">Gentle care for comfortable paws.</p>
+            </div>
+            <div class="mt-2 flex items-center justify-between">
+              <span class="font-semibold">$15</span>
+              <button class="bg-orange-600 text-white px-3 py-2 rounded" onclick="addToCart('svc-nail','Nail Trimming',15)">Add to Cart</button>
+            </div>
+          </div>
+          <!-- Haircut -->
+          <div class="bg-white rounded-xl shadow p-4 flex flex-col">
+            <img src="https://images.unsplash.com/photo-1571066476011-2aace6a695e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHw3fHxEb2clMjBoYWlyY3V0fGVufDB8MHx8fDE3NTY4MDU0NDB8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Haircut" class="h-40 w-full object-cover rounded" />
+            <div class="mt-2 flex-1">
+              <h3 class="font-semibold">Haircut</h3>
+              <p class="text-sm text-gray-600">Styled cut to suit breed and personality.</p>
+            </div>
+            <div class="mt-2 flex items-center justify-between">
+              <span class="font-semibold">$25</span>
+              <button class="bg-orange-600 text-white px-3 py-2 rounded" onclick="addToCart('svc-hair','Haircut',25)">Add to Cart</button>
+            </div>
+          </div>
+          <!-- Ear Cleaning -->
+          <div class="bg-white rounded-xl shadow p-4 flex flex-col">
+            <img src="https://images.unsplash.com/photo-1596088728260-08a654466a00?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHw4fHxFYXIlMjBjbGVhbmluZ3xlbnwwfDB8fHwxNzU2ODA1NDQ3fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Ear cleaning" class="h-40 w-full object-cover rounded" />
+            <div class="mt-2 flex-1">
+              <h3 class="font-semibold">Ear Cleaning</h3>
+              <p class="text-sm text-gray-600">Gentle ear cleaning for great hearing and comfort.</p>
+            </div>
+            <div class="mt-2 flex items-center justify-between">
+              <span class="font-semibold">$12</span>
+              <button class="bg-orange-600 text-white px-3 py-2 rounded" onclick="addToCart('svc-ear','Ear Cleaning',12)">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-800 text-white py-6" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div>
+        <strong>Niyantri Dog Care</strong><br/>
+        <span class="text-sm">Grooming in Hyderabad, India</span>
+      </div>
+      <div>
+        <span class="text-sm">Email: info@niyantridogcare.example</span><br/>
+        <span class="text-sm">Phone: +91 98765 43210</span>
+      </div>
+      <div class="text-right text-sm">&copy; 2025 Niyantri Dog Care</div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('mobile-menu-button');
+      const menu = document.getElementById('mobile-menu');
+      if (btn && menu) btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+      document.body.classList.add('body-loaded');
+      if (typeof Swiper !== 'undefined') {
+        new Swiper('.swiper-container', { loop:true, pagination:{el:'.swiper-pagination', clickable:true}, navigation:{nextEl:'.swiper-button-next', prevEl:'.swiper-button-prev'} });
+      }
+      // Update cart count on load
+      if (typeof updateCartCount === 'function') updateCartCount();
+    });
+  </script>
+</body>
+</html>
