@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Niyantri Dog Care - Contact</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>body{opacity:0; transition:opacity .6s ease-in}.body-loaded{opacity:1}</style>
+</head>
+<body class="antialiased" style="font-family: ui-sans-serif, system-ui, -apple-system, Inter, Arial;">
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 bg-white bg-opacity-90 backdrop-filter backdrop-blur-lg shadow-md z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center space-x-2">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" class="text-orange-600" aria-label="logo">
+            <path d="M3 12l4-2 4 2-4 2-4-2z" fill="currentColor"/>
+            <circle cx="9" cy="8" r="2" fill="#000"/>
+            <circle cx="14" cy="8" r="2" fill="#000"/>
+          </svg>
+          <span class="font-semibold text-xl text-gray-800">Niyantri Dog Care</span>
+        </a>
+        <nav class="hidden md:flex space-x-6 text-gray-700">
+          <a href="index.html" class="flex items-center hover:text-gray-900"><span class="mr-1">🏠</span>Home</a>
+          <a href="menu.html" class="flex items-center hover:text-gray-900"><span class="mr-1">🍖</span>Menu</a>
+          <a href="cart.html" class="flex items-center hover:text-gray-900"><span class="mr-1">🧺</span>Cart (<span id="cart-count">0</span>)</a>
+          <a href="about.html" class="flex items-center hover:text-gray-900"><span class="mr-1">ℹ️</span>About</a>
+          <a href="contact.html" class="flex items-center hover:text-gray-900"><span class="mr-1">✉️</span>Contact</a>
+        </nav>
+        <div class="md:hidden"><button id="mobile-menu-button" class="text-gray-700"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button></div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+      <a href="index.html" class="block py-2">Home</a>
+      <a href="menu.html" class="block py-2">Menu</a>
+      <a href="cart.html" class="block py-2">Cart</a>
+      <a href="about.html" class="block py-2">About</a>
+      <a href="contact.html" class="block py-2">Contact</a>
+    </div>
+  </header>
+
+  <main class="pt-20">
+    <section class="max-w-4xl mx-auto p-4">
+      <h1 class="text-3xl font-bold mb-4">Get in touch</h1>
+      <p class="mb-6">We’d love to hear from you. Reach out with any questions or to schedule an appointment.</p>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white p-4 rounded shadow">
+          <h3 class="font-semibold mb-2">Contact Information</h3>
+          <p class="text-sm">Address: 123 Hyderabad Street, Hyderabad, Telangana, India</p>
+          <p class="text-sm">Phone: +91 98765 43210</p>
+          <p class="text-sm">Email: info@niyantridogcare.example</p>
+        </div>
+        <form class="bg-white p-4 rounded shadow" onsubmit="return false;">
+          <div class="mb-3">
+            <label class="block text-sm mb-1">Your Name</label>
+            <input class="w-full border rounded px-3 py-2" type="text" required />
+          </div>
+          <div class="mb-3">
+            <label class="block text-sm mb-1">Email</label>
+            <input class="w-full border rounded px-3 py-2" type="email" required />
+          </div>
+          <div class="mb-3">
+            <label class="block text-sm mb-1">Message</label>
+            <textarea class="w-full border rounded px-3 py-2" rows="4" required></textarea>
+          </div>
+          <button class="bg-orange-600 text-white px-4 py-2 rounded">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-800 text-white py-6" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div>
+        <strong>Niyantri Dog Care</strong><br/>
+        <span class="text-sm">Grooming in Hyderabad, India</span>
+      </div>
+      <div>
+        <span class="text-sm">Email: info@niyantridogcare.example</span><br/>
+        <span class="text-sm">Phone: +91 98765 43210</span>
+      </div>
+      <div class="text-right text-sm">&copy; 2025 Niyantri Dog Care</div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('mobile-menu-button');
+      const menu = document.getElementById('mobile-menu');
+      if (btn && menu) btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+      document.body.classList.add('body-loaded');
+      updateCartCount();
+    });
+    function updateCartCount(){ const cart = JSON.parse(localStorage.getItem('shoppingCart') || '[]'); const total = cart.reduce((s,i)=>s+i.quantity,0); const el = document.getElementById('cart-count'); if (el) el.textContent = total; }
+  </script>
+</body>
+</html>
