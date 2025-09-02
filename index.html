@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Niyantri Dog Care - Home</title>
+  <meta name="description" content="Niyantri Dog Care: premium dog grooming in Hyderabad." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{brand:'#f59e0b'}}}}</script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <style>
+    body{opacity:0; transition:opacity 0.6s ease-in}.body-loaded{opacity:1}
+  </style>
+</head>
+<body class="antialiased" style="font-family: ui-sans-serif, system-ui, -apple-system, Inter, Arial;">
+  <!-- Header (consistent across pages) -->
+  <header class="fixed top-0 left-0 right-0 bg-white bg-opacity-90 backdrop-filter backdrop-blur-lg shadow-md z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center space-x-2">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" class="text-orange-600" aria-label="logo">
+            <path d="M3 12l4-2 4 2-4 2-4-2z" fill="currentColor"/>
+            <circle cx="9" cy="8" r="2" fill="#000"/>
+            <circle cx="14" cy="8" r="2" fill="#000"/>
+          </svg>
+          <span class="font-semibold text-xl text-gray-800">Niyantri Dog Care</span>
+        </a>
+        <nav class="hidden md:flex space-x-6 text-gray-700">
+          <a href="index.html" class="flex items-center hover:text-gray-900"><span class="mr-1">🏠</span>Home</a>
+          <a href="menu.html" class="flex items-center hover:text-gray-900"><span class="mr-1">🍖</span>Menu</a>
+          <a href="cart.html" class="flex items-center hover:text-gray-900"><span class="mr-1">🧺</span>Cart (<span id="cart-count">0</span>)</a>
+          <a href="about.html" class="flex items-center hover:text-gray-900"><span class="mr-1">ℹ️</span>About</a>
+          <a href="contact.html" class="flex items-center hover:text-gray-900"><span class="mr-1">✉️</span>Contact</a>
+        </nav>
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="text-gray-700">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+      <a href="index.html" class="block py-2">Home</a>
+      <a href="menu.html" class="block py-2">Menu</a>
+      <a href="cart.html" class="block py-2">Cart</a>
+      <a href="about.html" class="block py-2">About</a>
+      <a href="contact.html" class="block py-2">Contact</a>
+    </div>
+  </header>
+
+  <main class="pt-20">
+    <!-- HERO with Swiper carousel -->
+    <section class="w-full bg-gradient-to-r from-amber-500 to-orange-500 text-white py-20" aria-label="Hero">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div class="scroll-reveal opacity-0 translate-y-6">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Niyantri Dog Care</h1>
+            <p class="text-lg mb-6">Gentle grooming for your canine companion in Hyderabad. Bathing, spa, nails, haircut — all in one warm, loving space.</p>
+            <button class="bg-white text-orange-600 font-semibold px-6 py-3 rounded shadow hover:bg-gray-100 transition">Book Now</button>
+          </div>
+          <div class="scroll-reveal opacity-0 translate-y-6">
+            <div class="swiper-container w-full h-64 rounded-lg overflow-hidden shadow-lg">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide flex items-center justify-center bg-white/20">
+                  <img src="https://pixabay.com/get/ge0908fa73f7c15955ff5d7035e0c127412fccbeb972648069c6c6ac149c6065e00aa8459022db0ea5edb1630a2ce1cb6f878e2d6cb0e1fd596c06c236f9b82c0_640.jpg" alt="Grooming room" class="w-full h-full object-cover" />
+                </div>
+                <div class="swiper-slide flex items-center justify-center bg-white/20">
+                  <img src="https://images.unsplash.com/photo-1601375461426-62c0a9e73ffb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHw3fHxIYXBweSUyMGRvZyUyMGFmdGVyJTIwZ3Jvb21pbmd8ZW58MHwwfHx8MTc1NjgwNTQyMXww&ixlib=rb-4.1.0&q=80&w=1080" alt="Happy dog" class="w-full h-full object-cover" />
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white" aria-label="Intro">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="scroll-reveal opacity-0 translate-y-6">
+            <img src="https://pixabay.com/get/g56f37d3b40398daef71575ebfa9e7a19c315b243268c57c52ba4a92090f7c599852abef394ccf9124d03a58156b1586c346108872e910d1dbfa739a2ad18f86f_640.jpg" alt="Grooming station" class="rounded shadow-lg w-full" />
+          </div>
+          <div class="scroll-reveal opacity-0 translate-y-6">
+            <h2 class="text-2xl font-bold mb-4">Our Promise</h2>
+            <p>We treat every dog like family. Our certified groomers ensure comfort, safety, and happiness during every visit.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 bg-gray-50" aria-label="Testimonials">
+      <div class="max-w-7xl mx-auto px-4">
+        <h3 class="text-2xl font-semibold mb-6 scroll-reveal opacity-0">Quotes from Happy Owners</h3>
+        <div class="grid md:grid-cols-3 gap-6">
+          <blockquote class="p-4 bg-white rounded shadow hover:shadow-lg transition scroll-reveal opacity-0">
+            <p>“Best grooming in Hyderabad! Daisy loves it here.”</p>
+            <footer class="mt-2 text-sm text-gray-600">- Priya</footer>
+          </blockquote>
+          <blockquote class="p-4 bg-white rounded shadow hover:shadow-lg transition scroll-reveal opacity-0">
+            <p>“Caring staff and spotless station.”</p>
+            <footer class="mt-2 text-sm text-gray-600">- Aakash</footer>
+          </blockquote>
+          <blockquote class="p-4 bg-white rounded shadow hover:shadow-lg transition scroll-reveal opacity-0">
+            <p>“Bella always leaves looking fabulous.”</p>
+            <footer class="mt-2 text-sm text-gray-600">- Neha</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-800 text-white py-6" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div>
+        <strong>Niyantri Dog Care</strong><br/>
+        <span class="text-sm">Grooming in Hyderabad, India</span>
+      </div>
+      <div>
+        <span class="text-sm">Email: info@niyantridogcare.example</span><br/>
+        <span class="text-sm">Phone: +91 98765 43210</span>
+      </div>
+      <div class="text-right text-sm">&copy; 2025 Niyantri Dog Care</div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('mobile-menu-button');
+      const menu = document.getElementById('mobile-menu');
+      if (btn && menu) {
+        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+      }
+      // Page fade-in
+      requestAnimationFrame(() => document.body.classList.add('body-loaded'));
+      // Init Swiper
+      if (typeof Swiper !== 'undefined') {
+        new Swiper('.swiper-container', {
+          loop: true,
+          pagination: { el: '.swiper-pagination', clickable: true },
+          navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+        });
+      }
+      // Scroll reveal
+      const reveals = document.querySelectorAll('.scroll-reveal');
+      const obs = new IntersectionObserver((ents) => {
+        ents.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.remove('opacity-0','translate-y-6');
+            e.target.classList.add('opacity-100');
+            obs.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      reveals.forEach(el => { el.classList.add('opacity-0', 'translate-y-6'); obs.observe(el); });
+    });
+
+    // Shared cart functions
+    function getCart() { return JSON.parse(localStorage.getItem('shoppingCart')) || []; }
+    function saveCart(cart) { localStorage.setItem('shoppingCart', JSON.stringify(cart)); updateCartCount(); }
+    function addToCart(itemId, itemName, itemPrice) {
+      const cart = getCart();
+      const existing = cart.find(i => i.id === itemId);
+      if (existing) existing.quantity++; else cart.push({ id:itemId, name:itemName, price:itemPrice, quantity:1 });
+      saveCart(cart);
+      alert(itemName + ' has been added to your cart.');
+    }
+    function removeFromCart(itemId) {
+      let cart = getCart();
+      cart = cart.filter(i => i.id !== itemId);
+      saveCart(cart);
+      if (document.getElementById('cart-items-container')) renderCartPage();
+    }
+    function updateCartCount() {
+      const cart = getCart();
+      const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+      const el = document.getElementById('cart-count');
+      if (el) el.textContent = totalItems;
+    }
+    function renderCartPage() {
+      const cart = getCart();
+      const container = document.getElementById('cart-items-container');
+      const totalEl = document.getElementById('cart-total');
+      if (!container || !totalEl) return;
+      container.innerHTML = '';
+      if (cart.length === 0) {
+        container.innerHTML = '<p class="p-4">Your cart is empty.</p>';
+        totalEl.textContent = '0.00';
+        return;
+      }
+      let total = 0;
+      cart.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'flex justify-between items-center border-b py-2';
+        div.innerHTML = `<span>${item.name} (x${item.quantity})</span><div><span>$${(item.price * item.quantity).toFixed(2)}</span><button onclick="removeFromCart('${item.id}')" class="ml-4 text-red-500 hover:text-red-700">Remove</button></div>`;
+        container.appendChild(div);
+        total += item.price * item.quantity;
+      });
+      totalEl.textContent = total.toFixed(2);
+    }
+    async function proceedToCheckout() {
+      const cart = getCart();
+      if (cart.length === 0) { alert('Your cart is empty.'); return; }
+      const modal = document.getElementById('paypal-modal');
+      const statusEl = document.getElementById('paypal-status');
+      if (modal && statusEl) {
+        modal.classList.remove('hidden');
+        statusEl.textContent = 'Initializing PayPal checkout...';
+        const amount = cart.reduce((sum, it) => sum + it.price * it.quantity, 0);
+        try {
+          const resp = await mockPaypalCharge(amount, cart);
+          if (resp.status === 'success') {
+            statusEl.textContent = 'Payment successful! Transaction ID: ' + resp.transactionId;
+            setTimeout(() => {
+              localStorage.removeItem('shoppingCart');
+              updateCartCount();
+              renderCartPage();
+              modal.classList.add('hidden');
+            }, 1500);
+          } else {
+            statusEl.textContent = 'Payment failed. Please try again.';
+          }
+        } catch {
+          statusEl.textContent = 'Payment error. Please try again.';
+        }
+      }
+    }
+    function mockPaypalCharge(amount, cart) {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve({ status: 'success', transactionId: 'MOCK-PAYPAL-' + Date.now() });
+        }, 1500);
+      });
+    }
+  </script>
+
+  <!-- PayPal Mock Modal (in-page checkout) -->
+  <div id="paypal-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-white rounded-xl shadow-xl p-6 w-11/12 md:w-1/2">
+      <div class="flex justify-between items-center mb-4">
+        <h4 class="text-lg font-semibold">Pay with PayPal (Mock)</h4>
+        <button onclick="document.getElementById('paypal-modal').classList.add('hidden')" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <div id="paypal-status" class="mb-4 text-sm text-gray-700">Ready</div>
+      <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" onclick="proceedToCheckout()">Pay Now</button>
+    </div>
+  </div>
+
+  <script>
+    // On any page load, ensure cart count updates
+    document.addEventListener('DOMContentLoaded', () => { updateCartCount(); if (document.getElementById('cart-items-container')) renderCartPage(); });
+  </script>
+</body>
+</html>
